@@ -1,29 +1,16 @@
-number_n = input('Введите желаемое 3-x значное число: ')
+number_n = int(input('Введите желаемое 3-x значное число: '))
 
-# ИСПРАВИТЬ: избыточное количество операций
-# ИСПРАВИТЬ: одинаковые операции в большинстве случаев имеет смысл выполнить заранее
-number_3 = int(number_n) // 100
-number_2 = (int(number_n) - number_3*100) // 10
-number_1 = (int(number_n) - number_3*100 - number_2*10) // 1
 
-summa = number_3 + number_2 + number_1
-# УДАЛИТЬ: избыточная операция
-isumma = int(summa)
+number_3 = number_n // 100 
+number_2 = number_n // 10 % 10
+number_1 = number_n % 10
 
-der = number_3 * number_2 * number_1
-# УДАЛИТЬ: избыточная операция
-ider = int(der)
 
-print(f"Сумма цифр = {isumma} {'\n'}Произведение цифр = {ider}")
+print(f"Сумма цифр = {number_1 + number_2 + number_3} {'\n'}Произведение цифр = {number_1 * number_2 *number_3}")
 
 
 # Введите желаемое 3-x значное число: 202
 # Сумма цифр = 4
 # Произведение цифр = 0
 
-
-# инетресная задача с подвохом
-
-
-# ИТОГ: 3/4
 
